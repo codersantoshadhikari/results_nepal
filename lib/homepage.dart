@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resultnepal/add.dart';
 import 'package:resultnepal/models/results_model.dart';
-import 'package:resultnepal/test.dart';
 import 'model.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,6 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         title: const Text(
           "Result Nepal",
@@ -48,10 +47,11 @@ class HomePage extends StatelessWidget {
         itemBuilder: (context, index) {
           var data = ResultsModel.resultsModel[index];
           return ReadBox(
-              title: data.title,
-              url: data.url,
-              color: data.color,
-              imageAsset: data.imageAsset);
+            title: data.title,
+            url: data.url,
+            color: data.color,
+            imageAsset: data.imageAsset,
+          );
         },
       ),
     );

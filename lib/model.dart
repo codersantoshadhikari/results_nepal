@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:resultnepal/add.dart';
 import 'package:resultnepal/form.dart';
 import 'package:resultnepal/homepage.dart';
+import 'package:resultnepal/models/from_model.dart';
+import 'package:resultnepal/models/results_model.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -63,9 +65,11 @@ class DrawerModel {
 }
 
 List<DrawerModel> drawerList = [
-  DrawerModel(Icons.home, "Home", FromScreen()),
-  DrawerModel(Icons.phone, "Contact Us", const HomePage()),
+  DrawerModel(Icons.home, "Home Page", From_model()),
+  DrawerModel(Icons.apps_sharp, " All Nepal Result Check ", const Result()),
+  DrawerModel(Icons.apps_sharp, " All Category  From ", const FormScreen()),
+  DrawerModel(Icons.apps_sharp, "  Entertainment Video", ""),
+  DrawerModel(Icons.apps_sharp, "  Internet Speed Test", ""),
   DrawerModel(Icons.info, "About Us", const Add()),
-  DrawerModel(Icons.access_alarm, "Alarm", const Add()),
-  DrawerModel(Icons.map_outlined, "Map", const Add())
+  DrawerModel(Icons.phone, "Contact Us", const HomePage()),
 ];

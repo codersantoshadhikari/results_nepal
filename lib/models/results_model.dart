@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ResultsModel {
   final String title;
@@ -34,7 +36,7 @@ class ResultsModel {
     ResultsModel(
       title: "TU Result",
       url: "https://tuexam.edu.np/",
-      imageAsset: 'assets/images/tu.png',
+      imageAsset: 'assets/images/tu.PNG',
       color: const Color.fromARGB(255, 16, 156, 21),
     ),
     ResultsModel(
@@ -43,47 +45,57 @@ class ResultsModel {
       imageAsset: 'assets/images/ku.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
-    ResultsModel(
-      title: "Pan Card",
-      url: "https://taxpayerportal.ird.gov.np/taxpayer/app.html",
-      imageAsset: 'assets/images/pan.jpg',
-      color: const Color.fromARGB(255, 228, 58, 6),
-    ),
-    ResultsModel(
-      title: "E Passport From",
-      url: "https://emrtds.nepalpassport.gov.np/",
-      imageAsset: 'assets/images/epassport.png',
-      color: const Color.fromARGB(255, 55, 49, 4),
-    ),
-    ResultsModel(
-      title: "National ID Card",
-      url: "http://www.nidmc.gov.np/PreEnrollment/",
-      imageAsset: 'assets/images/nationalid.jfif',
-      color: const Color.fromARGB(255, 41, 31, 2),
-    ),
-    ResultsModel(
-      title: "Election Commission",
-      url: "https://election.gov.np/en",
-      imageAsset: 'assets/images/Election.png',
-      color: const Color.fromARGB(255, 19, 18, 19),
-    ),
-    ResultsModel(
-      title: "Police Report",
-      url: "https://opcr.nepalpolice.gov.np/#/login",
-      imageAsset: 'assets/images/policereport.png',
-      color: const Color.fromARGB(255, 244, 123, 3),
-    ),
-    ResultsModel(
-      title: "Your Internet Speed",
-      imageAsset: 'assets/images/speed.png',
-      url: "https://fast.com/",
-      color: const Color.fromARGB(255, 176, 7, 7),
-    ),
-    ResultsModel(
-      title: "Short Videos",
-      url: "https://www.tiktok.com/",
-      imageAsset: 'assets/images/tiktok.png',
-      color: const Color.fromARGB(255, 56, 34, 3),
-    ),
   ];
+}
+
+class Result extends StatelessWidget {
+  const Result({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    List<ResultsModel> result = ResultsModel.resultsModel;
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color.fromARGB(255, 161, 160, 160),
+        appBar: AppBar(
+          title: const Text("Homepage"),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: GridView.builder(
+            itemCount: ResultsModel.resultsModel.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
+            itemBuilder: (context, index) {
+              // var data = ResultsModel.resultsModel[index];
+              return GestureDetector(
+                onTap: () {
+                  launchUrlString(result[index].url);
+                },
+                child: Card(
+                  elevation: 6,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)),
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        result[index].imageAsset,
+                        height: 160,
+                      ),
+                      Text(
+                        result[index].title,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 22),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
 }

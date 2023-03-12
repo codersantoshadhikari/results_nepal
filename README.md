@@ -1,0 +1,3 @@
+This is a Dart code snippet that defines a list of ResultsModel objects. Each object has a title (a string), a url (a string representing a URL), an imageAsset (a string representing the path to an image asset), and a color (a Color object representing the background color for the corresponding result).
+
+This code can be used in a Flutter project to display a list of clickable results, each with a title, image, and background color, that navigate to the corresponding URL when clicked. The results include links to various Nepali government websites such as the Election Commission, National ID Card registration, police report, and internet speed test. It also includes popular social media apps like TikTok.

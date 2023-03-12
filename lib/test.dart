@@ -9,7 +9,7 @@ class Test extends StatelessWidget {
         appBar: AppBar(title: const Text("test")),
         body: Container(
           height: 200,
-          color: Colors.black,
+          color: const Color.fromARGB(255, 217, 31, 31),
           child: const Text("Welcome to newscreen"),
         ));
   }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/results_model.dart';
-
+// import 'package:resultnepal/form.dart';
 // import 'models/results_model.dart';
 
-class FromScreen extends StatelessWidget {
-  FromScreen({Key? key}) : super(key: key);
+class From_model extends StatelessWidget {
+  From_model({Key? key}) : super(key: key);
 
   List<ResultsModel> result = ResultsModel.resultsModel;
 
@@ -16,8 +16,8 @@ class FromScreen extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text(result[6].title),
-            Image.asset(result[6].imageAsset),
+            Text(result[4].title),
+            Image.asset(result[4].imageAsset),
           ],
         ));
   }

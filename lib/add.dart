@@ -8,7 +8,7 @@ class Add extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Add New Item"),
-        backgroundColor: Colors.amber,
+        backgroundColor: const Color.fromARGB(255, 108, 89, 32),
       ),
       body: Column(
         children: [
