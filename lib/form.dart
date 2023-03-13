@@ -12,12 +12,18 @@ class From_model extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Result Nepal App"),
         ),
-        body: Column(
-            // children: [
-            //   // Text(result[4].title),
-            //   // Image.asset(result[4].imageAsset),
-            // ],
-
-            ));
+        body: Padding(
+          padding: const EdgeInsets.all(11.0),
+          child: Column(
+            children: [
+              Center(child: Text(result[1].title)),
+              Image.asset(result[1].imageAsset),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(result[2].title),
+              ),
+            ],
+          ),
+        ));
   }
 }
