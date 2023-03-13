@@ -57,10 +57,11 @@ class DrawerModel {
 
 List<DrawerModel> drawerList = [
   DrawerModel(Icons.home, "Home Page", From_model()),
-  DrawerModel(Icons.apps_sharp, " All Nepal Result Check ", const Result()),
+  DrawerModel(Icons.apps_sharp, " Nepal Result Check, texts= ", const Result()),
   DrawerModel(Icons.apps_sharp, " All Category  From ", const FormScreen()),
-  DrawerModel(Icons.apps_sharp, "  Entertainment Video", const VidoesScreen()),
-  DrawerModel(Icons.apps_sharp, "  Internet Speed Test", const InternetScreen()),
+  DrawerModel(Icons.apps_sharp, " Entertainment Video", const VidoesScreen()),
+  DrawerModel(
+      Icons.apps_sharp, "  Internet Speed Test", const InternetScreen()),
   DrawerModel(Icons.info, "About Us", const Add()),
   DrawerModel(Icons.phone, "Contact Us", const HomePage()),
 ];

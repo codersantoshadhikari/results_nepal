@@ -54,7 +54,7 @@ class FormScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Form"),
+        title: const Text("Apply All Category From"),
       ),
       body: GridView.builder(
         itemCount: ResultsModel.resultsModel.length,

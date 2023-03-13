@@ -4,13 +4,13 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 List<ResultsModel> resultsModel = [
   ResultsModel(
-    title: "Fast.com",
-    imageAsset: 'assets/images/speed.png',
+    title: "Fast",
+    imageAsset: 'assets/images/fast.png',
     url: "https://fast.com/",
     color: const Color.fromARGB(255, 176, 7, 7),
   ),
   ResultsModel(
-    title: "Speedtest.net",
+    title: "Speed",
     url: "https://www.speedtest.net/",
     imageAsset: 'assets/images/speed.png',
     color: const Color.fromARGB(255, 56, 34, 3),
@@ -27,7 +27,7 @@ class InternetScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 161, 160, 160),
         appBar: AppBar(
-          title: const Text("InternetScreen"),
+          title: const Text("Check Your Internet Speed"),
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 10),

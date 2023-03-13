@@ -15,12 +15,12 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 11, 0, 0),
+              color: Color.fromARGB(255, 3, 2, 2),
             ),
           ),
         ),
         drawer: Drawer(
-          backgroundColor: const Color.fromARGB(255, 94, 240, 3),
+          backgroundColor: const Color.fromARGB(255, 74, 153, 21),
           child: Column(
             children: [
               const Padding(

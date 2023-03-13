@@ -57,7 +57,14 @@ class Result extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 161, 160, 160),
         appBar: AppBar(
-          title: const Text("Homepage"),
+          title: const Text(
+            "Check you Result",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 5, 5, 5),
+            ),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 10),

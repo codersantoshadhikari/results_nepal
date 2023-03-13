@@ -39,7 +39,7 @@ class VidoesScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 161, 160, 160),
         appBar: AppBar(
-          title: const Text("Homepage"),
+          title: const Text("Welcome to entertainment videos"),
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 10),
