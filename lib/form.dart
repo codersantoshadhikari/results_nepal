@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/results_model.dart';
-// import 'package:resultnepal/form.dart';
-// import 'models/results_model.dart';
+
 
 class From_model extends StatelessWidget {
   From_model({Key? key}) : super(key: key);

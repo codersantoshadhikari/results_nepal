@@ -5,8 +5,8 @@ import 'package:resultnepal/homepage.dart';
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
 
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'models/Entertainment_model.dart';
+import 'models/Internetspeed.dart';
 
 class ReadBox extends StatelessWidget {
   final String title;
@@ -24,33 +24,24 @@ class ReadBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () async {
-        if (await canLaunchUrl(Uri.base)) {
-          await launchUrlString(url);
-        } else {
-          throw 'Could not launch $url';
-        }
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: Center(
-            child: Text(
-              title,
-              style: const TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
-          height: 100,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: color,
-              image: DecorationImage(image: AssetImage(imageAsset))),
         ),
+        height: 100,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: color,
+            image: DecorationImage(image: AssetImage(imageAsset))),
       ),
     );
   }
@@ -68,8 +59,8 @@ List<DrawerModel> drawerList = [
   DrawerModel(Icons.home, "Home Page", From_model()),
   DrawerModel(Icons.apps_sharp, " All Nepal Result Check ", const Result()),
   DrawerModel(Icons.apps_sharp, " All Category  From ", const FormScreen()),
-  DrawerModel(Icons.apps_sharp, "  Entertainment Video", ""),
-  DrawerModel(Icons.apps_sharp, "  Internet Speed Test", ""),
+  DrawerModel(Icons.apps_sharp, "  Entertainment Video", const VidoesScreen()),
+  DrawerModel(Icons.apps_sharp, "  Internet Speed Test", const InternetScreen()),
   DrawerModel(Icons.info, "About Us", const Add()),
   DrawerModel(Icons.phone, "Contact Us", const HomePage()),
 ];

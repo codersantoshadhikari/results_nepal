@@ -1,10 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:resultnepal/models/results_model.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 List<ResultsModel> resultsModel = [
   ResultsModel(
@@ -58,7 +54,7 @@ class FormScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Form"),
+        title: const Text("Form"),
       ),
       body: GridView.builder(
         itemCount: ResultsModel.resultsModel.length,
@@ -68,7 +64,7 @@ class FormScreen extends StatelessWidget {
           // var data = ResultsModel.resultsModel[index];
           return GestureDetector(
             onTap: () {
-              
+              launchUrlString(resultsModel[index].url);
             },
             child: Card(
               elevation: 6,
@@ -80,7 +76,6 @@ class FormScreen extends StatelessWidget {
                   Image.asset(
                     resultsModel[index].imageAsset,
                     height: 132,
-
                   ),
                   Text(
                     resultsModel[index].title,

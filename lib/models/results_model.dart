@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ResultsModel {
@@ -56,7 +55,7 @@ class Result extends StatelessWidget {
     List<ResultsModel> result = ResultsModel.resultsModel;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 161, 160, 160),
+        backgroundColor: const Color.fromARGB(255, 161, 160, 160),
         appBar: AppBar(
           title: const Text("Homepage"),
         ),
