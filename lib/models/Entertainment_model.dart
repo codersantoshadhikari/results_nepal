@@ -18,12 +18,12 @@ class ResultsModel {
       title: "Tiktok Vidoes",
       url: "https://www.tiktok.com/",
       imageAsset: 'assets/images/tiktok.png',
-      color: const Color.fromARGB(255, 120, 100, 176),
+      color: const Color.fromARGB(255, 112, 92, 167),
     ),
     ResultsModel(
       title: "Youtube Vidoes",
       url: "https://www.youtube.com/",
-      imageAsset: 'assets/images/see.png',
+      imageAsset: 'assets/images/youtube.png',
       color: const Color.fromARGB(255, 120, 100, 176),
     ),
   ];
@@ -42,11 +42,14 @@ class VidoesScreen extends StatelessWidget {
           title: const Text("Welcome to entertainment videos"),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 12),
           child: GridView.builder(
             itemCount: ResultsModel.resultsModel.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
+              crossAxisCount: 2,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+            ),
             itemBuilder: (context, index) {
               // var data = ResultsModel.resultsModel[index];
               return GestureDetector(
@@ -62,7 +65,7 @@ class VidoesScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         result[index].imageAsset,
-                        height: 160,
+                        height: 120,
                       ),
                       Text(
                         result[index].title,

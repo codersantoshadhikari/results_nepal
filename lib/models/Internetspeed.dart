@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resultnepal/models/results_model.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import 'package:resultnepal/models/results_model.dart';
 
 List<ResultsModel> resultsModel = [
   ResultsModel(

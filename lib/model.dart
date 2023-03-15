@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resultnepal/add.dart';
-import 'package:resultnepal/form.dart';
 import 'package:resultnepal/homepage.dart';
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
-
 import 'models/Entertainment_model.dart';
 import 'models/Internetspeed.dart';
 
@@ -56,12 +53,27 @@ class DrawerModel {
 }
 
 List<DrawerModel> drawerList = [
-  DrawerModel(Icons.home, "Home Page", From_model()),
-  DrawerModel(Icons.apps_sharp, " Nepal Result Check, texts= ", const Result()),
+  DrawerModel(Icons.home, "Home Page", const Result()),
+  DrawerModel(Icons.apps_sharp, " Nepal Result Check", const Result()),
   DrawerModel(Icons.apps_sharp, " All Category  From ", const FormScreen()),
   DrawerModel(Icons.apps_sharp, " Entertainment Video", const VidoesScreen()),
   DrawerModel(
       Icons.apps_sharp, "  Internet Speed Test", const InternetScreen()),
-  DrawerModel(Icons.info, "About Us", const Add()),
   DrawerModel(Icons.phone, "Contact Us", const HomePage()),
+];
+
+class Component {
+  String title;
+  String image;
+  dynamic screen;
+
+  Component(this.title, this.image, this.screen);
+}
+
+List<Component> component = [
+  Component("Result", "assets/images/result.png", const Result()),
+  Component("Form", "assets/images/form.jpg", const FormScreen()),
+  Component(
+      "Entertaiment", "assets/images/entertainment.png", const VidoesScreen()),
+  Component("Internet", "assets/images/internet.jpg", const InternetScreen()),
 ];

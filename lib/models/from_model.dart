@@ -58,10 +58,11 @@ class FormScreen extends StatelessWidget {
       ),
       body: GridView.builder(
         itemCount: ResultsModel.resultsModel.length,
-        gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 10,
+        ),
         itemBuilder: (context, index) {
-          // var data = ResultsModel.resultsModel[index];
           return GestureDetector(
             onTap: () {
               launchUrlString(resultsModel[index].url);
@@ -75,7 +76,7 @@ class FormScreen extends StatelessWidget {
                 children: [
                   Image.asset(
                     resultsModel[index].imageAsset,
-                    height: 132,
+                    height: 120,
                   ),
                   Text(
                     resultsModel[index].title,

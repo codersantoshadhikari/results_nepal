@@ -30,7 +30,7 @@ class ResultsModel {
       title: "PU Result",
       url: "https://pu.edu.np/",
       imageAsset: 'assets/images/pu.jfif',
-      color: Colors.orange,
+      color: const Color.fromARGB(255, 12, 12, 12),
     ),
     ResultsModel(
       title: "TU Result",
@@ -66,40 +66,40 @@ class Result extends StatelessWidget {
             ),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(top: 10),
-          child: GridView.builder(
-            itemCount: ResultsModel.resultsModel.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
-            itemBuilder: (context, index) {
-              // var data = ResultsModel.resultsModel[index];
-              return GestureDetector(
-                onTap: () {
-                  launchUrlString(result[index].url);
-                },
-                child: Card(
-                  elevation: 6,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18)),
-                  color: Colors.white,
-                  child: Column(
-                    children: [
-                      Image.asset(
+        body: GridView.builder(
+          itemCount: ResultsModel.resultsModel.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2),
+          itemBuilder: (context, index) {
+            // var data = ResultsModel.resultsModel[index];
+            return GestureDetector(
+              onTap: () {
+                launchUrlString(result[index].url);
+              },
+              child: Card(
+                elevation: 6,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18)),
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
                         result[index].imageAsset,
-                        height: 160,
+                        height: 120,
                       ),
-                      Text(
-                        result[index].title,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22),
-                      ),
-                    ],
-                  ),
+                    ),
+                    Text(
+                      result[index].title,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 22),
+                    ),
+                  ],
                 ),
-              );
-            },
-          ),
+              ),
+            );
+          },
         ),
       ),
     );
