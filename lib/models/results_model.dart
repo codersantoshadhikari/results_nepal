@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:resultnepal/screens/browser_screen.dart';
 
 class ResultsModel {
   final String title;
@@ -16,7 +16,7 @@ class ResultsModel {
   static List<ResultsModel> resultsModel = [
     ResultsModel(
       title: "SEE Result",
-      url: "https://see.ntc.net.np/",
+      url: "https://see.ntc.net.np",
       imageAsset: 'assets/images/see.png',
       color: const Color.fromARGB(255, 120, 100, 176),
     ),
@@ -71,10 +71,14 @@ class Result extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2),
           itemBuilder: (context, index) {
-            // var data = ResultsModel.resultsModel[index];
+            var data = ResultsModel.resultsModel[index];
             return GestureDetector(
               onTap: () {
-                launchUrlString(result[index].url);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => BrowserScreen(url: data.url)));
+                //launchUrl(Uri.parse(data.url));
               },
               child: Card(
                 elevation: 6,

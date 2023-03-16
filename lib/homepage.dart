@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/about_screen.dart';
-import 'package:resultnepal/models/results_model.dart';
 import 'model.dart';
 
 class HomePage extends StatelessWidget {
