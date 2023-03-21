@@ -29,12 +29,12 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 3, 2, 2),
+              color: Color.fromARGB(255, 5, 3, 3),
             ),
           ),
         ),
         drawer: Drawer(
-          backgroundColor: const Color.fromARGB(255, 91, 215, 8),
+          backgroundColor: const Color.fromARGB(255, 77, 7, 255),
           child: Column(
             children: [
               const Padding(
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 226, 225, 225),
                   ),
                 ),
               ),
@@ -75,11 +75,12 @@ class HomePage extends StatelessWidget {
                       child: ListTile(
                         leading: Icon(
                           drawerList[index].icon,
-                          color: Colors.black,
+                          color: Color.fromARGB(255, 248, 245, 245),
                         ),
                         title: Text(
                           drawerList[index].title,
-                          style: const TextStyle(color: Colors.black),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 223, 214, 214)),
                         ),
                       ),
                     );

@@ -18,7 +18,7 @@ class ResultsModel {
       title: "SEE Result",
       url: "https://see.ntc.net.np",
       imageAsset: 'assets/images/see.png',
-      color: const Color.fromARGB(255, 120, 100, 176),
+      color: const Color.fromARGB(255, 115, 94, 171),
     ),
     ResultsModel(
       title: "NEB Result",

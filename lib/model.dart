@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:resultnepal/homepage.dart';
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
 import 'models/Entertainment_model.dart';
 import 'models/Internetspeed.dart';
+import 'models/contact_screen.dart';
 
 class ReadBox extends StatelessWidget {
   final String title;
@@ -30,7 +30,7 @@ class ReadBox extends StatelessWidget {
             style: const TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Color.fromARGB(255, 22, 11, 182),
             ),
           ),
         ),
@@ -53,13 +53,12 @@ class DrawerModel {
 }
 
 List<DrawerModel> drawerList = [
-  DrawerModel(Icons.home, "Home Page", const Result()),
   DrawerModel(Icons.apps_sharp, " Nepal Result Check", const Result()),
   DrawerModel(Icons.apps_sharp, " All Category  From ", const FormScreen()),
   DrawerModel(Icons.apps_sharp, " Entertainment Video", const VidoesScreen()),
   DrawerModel(
       Icons.apps_sharp, "  Internet Speed Test", const InternetScreen()),
-  DrawerModel(Icons.phone, "Contact Us", const HomePage()),
+  DrawerModel(Icons.phone, "Contact Us", const ContactScreen()),
 ];
 
 class Component {
@@ -68,6 +67,8 @@ class Component {
   dynamic screen;
 
   Component(this.title, this.image, this.screen);
+
+  IconData? get icon => null;
 }
 
 List<Component> component = [

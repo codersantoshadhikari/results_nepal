@@ -13,12 +13,15 @@ class BrowserScreen extends StatefulWidget {
 class _BrowserScreenState extends State<BrowserScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Browser Screen'),
-      ),
-      body: WebViewWidget(
-        controller: WebViewController()..loadRequest(Uri.parse(widget.url)),
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: WebViewWidget(
+            controller: WebViewController()..loadRequest(Uri.parse(widget.url)),
+          ),
+        ),
       ),
     );
   }

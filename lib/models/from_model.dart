@@ -17,7 +17,7 @@ List<ResultsModel> resultsModel = [
   ),
   ResultsModel(
     title: "National ID Card",
-    url: "http://www.nidmc.gov.np/PreEnrollment/",
+    url: "https://enrollment.donidcr.gov.np/PreEnrollment/",
     imageAsset: 'assets/images/nationalid.jfif',
     color: const Color.fromARGB(255, 41, 31, 2),
   ),

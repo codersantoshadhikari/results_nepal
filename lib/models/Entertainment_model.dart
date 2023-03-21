@@ -18,7 +18,7 @@ class ResultsModel {
       title: "Tiktok Vidoes",
       url: "https://www.tiktok.com/",
       imageAsset: 'assets/images/tiktok.png',
-      color: const Color.fromARGB(255, 112, 92, 167),
+      color: const Color.fromARGB(255, 106, 84, 167),
     ),
     ResultsModel(
       title: "Youtube Vidoes",
