@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "NEPAL  WEBSITE",
-
-      color: Color.fromARGB(255, 87, 85, 76),
-      // theme: ThemeData(),
+// theme: ThemeData(),
       home: HomePage(),
     );
   }

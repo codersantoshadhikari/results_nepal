@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 103, 153, 4),
+            color: Color.fromARGB(255, 245, 246, 244),
           ),
         ),
         actions: [
@@ -29,8 +29,8 @@ class HomePage extends StatelessWidget {
                 ),
               );
             },
-            icon:
-                const Icon(Icons.info, color: Color.fromARGB(255, 214, 159, 6)),
+            icon: const Icon(Icons.info,
+                color: Color.fromARGB(255, 253, 253, 253)),
           )
         ],
         elevation: 0,
@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 70, 38, 151),
+                color: const Color(0xFF3700B3),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: const Color.fromARGB(255, 42, 20, 104),
+      backgroundColor: const Color(0xFF3700B3),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 88, 163, 3),
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
             const SizedBox(height: 10),

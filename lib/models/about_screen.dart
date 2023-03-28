@@ -9,7 +9,26 @@ class AboutScreen extends StatelessWidget {
         title: const Text('Result Nepal Application About'),
         backgroundColor: const Color.fromARGB(255, 77, 7, 255),
       ),
-      body: Padding(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromARGB(255, 131, 131, 240),
+              Color.fromARGB(255, 255, 255, 255),
+            ],
+          ),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 5,
+              blurRadius: 7,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
         padding: const EdgeInsets.all(16),
         child: SizedBox(
           child: Column(
