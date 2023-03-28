@@ -37,6 +37,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(0, 29, 6, 112),
       ),
       drawer: Drawer(
+        backgroundColor: const Color.fromARGB(255, 227, 231, 231),
         child: Column(
           children: [
             DrawerHeader(
@@ -87,7 +88,7 @@ class HomePage extends StatelessWidget {
                       title: Text(
                         drawerList[index].title,
                         style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 19,
                             color: Colors.black,
                             fontWeight: FontWeight.bold),
                       ),
