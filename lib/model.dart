@@ -57,14 +57,14 @@ class DrawerModel {
 }
 
 List<DrawerModel> drawerList = [
-  DrawerModel("assets/images/logo.png", "Nepal Result Check", const Result()),
+  DrawerModel("assets/images/result.png", "Nepal Result Check", const Result()),
   DrawerModel(
-      "assets/images/logo.png", "All Category From", const FormScreen()),
-  DrawerModel(
-      "assets/images/logo.png", "Entertainment Videos", const VidoesScreen()),
-  DrawerModel(
-      "assets/images/logo.png", "Internet Speed Test", const InternetScreen()),
-  DrawerModel("assets/images/logo.png", "Contact Us", const ContactScreen()),
+      "assets/images/form.jpg", "All Category From", const FormScreen()),
+  DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
+      const VidoesScreen()),
+  DrawerModel("assets/images/internet.jpg", "Internet Speed Test",
+      const InternetScreen()),
+  DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),
 ];
 
 class Component {

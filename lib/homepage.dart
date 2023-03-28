@@ -51,12 +51,12 @@ class HomePage extends StatelessWidget {
                     child: Image.asset("assets/images/logo.png"),
                   ),
                   const SizedBox(
-                    height: 5,
+                    height: 3,
                   ),
                   const Text(
-                    "Welcome To Result Nepal App",
+                    "Welcome To Result Nepal ",
                     style: TextStyle(
-                      fontSize: 23,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 242, 207, 207),
                     ),
