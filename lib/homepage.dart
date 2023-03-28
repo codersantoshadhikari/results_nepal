@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                     maxRadius: 50,
                     child: Image.asset("assets/images/logo.png"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   const Text(
