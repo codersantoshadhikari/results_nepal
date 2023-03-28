@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                     height: 5,
                   ),
                   const Text(
-                    "Welcome To Result Nepal",
+                    "Welcome To Result Nepal App",
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.bold,
