@@ -49,7 +49,7 @@ class ReadBox extends StatelessWidget {
 }
 
 class DrawerModel {
-  IconData icon;
+  String icon;
   String title;
   dynamic screen;
 
@@ -57,11 +57,14 @@ class DrawerModel {
 }
 
 List<DrawerModel> drawerList = [
-  DrawerModel(Icons.apps_sharp, "Nepal Result Check", const Result()),
-  DrawerModel(Icons.apps_sharp, "All Category From", const FormScreen()),
-  DrawerModel(Icons.apps_sharp, "Entertainment Videos", const VidoesScreen()),
-  DrawerModel(Icons.apps_sharp, "Internet Speed Test", const InternetScreen()),
-  DrawerModel(Icons.phone, "Contact Us", const ContactScreen()),
+  DrawerModel("assets/images/logo.png", "Nepal Result Check", const Result()),
+  DrawerModel(
+      "assets/images/logo.png", "All Category From", const FormScreen()),
+  DrawerModel(
+      "assets/images/logo.png", "Entertainment Videos", const VidoesScreen()),
+  DrawerModel(
+      "assets/images/logo.png", "Internet Speed Test", const InternetScreen()),
+  DrawerModel("assets/images/logo.png", "Contact Us", const ContactScreen()),
 ];
 
 class Component {

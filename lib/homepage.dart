@@ -41,17 +41,24 @@ class HomePage extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: const Color(0xFF3700B3),
+                color: Color.fromARGB(255, 55, 14, 150),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  Text(
+                children: [
+                  CircleAvatar(
+                    maxRadius: 50,
+                    child: Image.asset("assets/images/logo.png"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
                     "Welcome To Result Nepal",
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 7, 0, 0),
+                      color: Color.fromARGB(255, 242, 207, 207),
                     ),
                   ),
                 ],
@@ -71,13 +78,18 @@ class HomePage extends StatelessWidget {
                       );
                     },
                     child: ListTile(
-                      leading: Icon(
+                      leading: Image.asset(
                         drawerList[index].icon,
-                        color: const Color.fromARGB(255, 138, 30, 30),
+                        height: 25,
+                        width: 50,
+                        // color: Color.fromARGB(255, 254, 252, 252),
                       ),
                       title: Text(
                         drawerList[index].title,
-                        style: const TextStyle(color: Colors.black),
+                        style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   );
@@ -91,6 +103,7 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
