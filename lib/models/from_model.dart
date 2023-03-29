@@ -32,7 +32,31 @@ List<ResultsModel> resultsModel = [
     url: "https://opcr.nepalpolice.gov.np/#/login",
     imageAsset: 'assets/images/policereport.png',
     color: const Color.fromARGB(255, 244, 123, 3),
-  )
+  ),
+  ResultsModel(
+    title: "Driving  From",
+    url: "https://applydl.dotm.gov.np/",
+    imageAsset: 'assets/images/policereport.png',
+    color: const Color.fromARGB(255, 244, 123, 3),
+  ),
+  ResultsModel(
+    title: "IPO   Apply",
+    url: "https://meroshare.cdsc.com.np/",
+    imageAsset: 'assets/images/policereport.png',
+    color: const Color.fromARGB(255, 244, 123, 3),
+  ),
+  ResultsModel(
+    title: "NOC   Apply",
+    url: "https://noc.moest.gov.np/",
+    imageAsset: 'assets/images/policereport.png',
+    color: const Color.fromARGB(255, 244, 123, 3),
+  ),
+  ResultsModel(
+    title: "QR Code   Apply",
+    url: "https://vaccine.mohp.gov.np/public-request-form",
+    imageAsset: 'assets/images/policereport.png',
+    color: const Color.fromARGB(255, 244, 123, 3),
+  ),
 ];
 
 class FormScreen extends StatelessWidget {
@@ -41,6 +65,7 @@ class FormScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: const Text("Apply All Category From"),
       ),
@@ -59,17 +84,24 @@ class FormScreen extends StatelessWidget {
               elevation: 6,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18)),
-              color: Color.fromARGB(255, 30, 56, 172),
+              color: const Color.fromARGB(255, 234, 235, 238),
               child: Column(
+                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    resultsModel[index].imageAsset,
-                    height: 120,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      resultsModel[index].imageAsset,
+                      height: 100,
+                    ),
                   ),
-                  Text(
-                    resultsModel[index].title,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 22),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      resultsModel[index].title,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15),
+                    ),
                   ),
                 ],
               ),

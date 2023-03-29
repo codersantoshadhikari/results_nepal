@@ -4,6 +4,7 @@ import 'package:resultnepal/models/results_model.dart';
 import 'models/Entertainment_model.dart';
 import 'models/Internetspeed.dart';
 import 'models/contact_screen.dart';
+import 'models/news.dart';
 
 class ReadBox extends StatelessWidget {
   final String title;
@@ -25,12 +26,15 @@ class ReadBox extends StatelessWidget {
       padding: const EdgeInsets.all(1.0),
       child: Container(
         child: Center(
-          child: Text(
-            title,
-            style: const TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.deepPurple,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              title,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
+              ),
             ),
           ),
         ),
@@ -59,11 +63,12 @@ class DrawerModel {
 List<DrawerModel> drawerList = [
   DrawerModel("assets/images/result.png", "Nepal Result Check", const Result()),
   DrawerModel(
-      "assets/images/form.jpg", "All Category From", const FormScreen()),
+      "assets/images/form.jpg", "Apply All Category From", const FormScreen()),
   DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
       const VidoesScreen()),
   DrawerModel("assets/images/internet.jpg", "Internet Speed Test",
       const InternetScreen()),
+  DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
   DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),
 ];
 

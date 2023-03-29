@@ -16,22 +16,58 @@ class ResultsModel {
 
   static List<ResultsModel> resultsModel = [
     ResultsModel(
-      title: "TikTok Videos",
-      url: "https://www.tiktok.com/",
-      imageAsset: 'assets/images/tiktok.png',
+      title: "Gorkha Patra",
+      url: "https://gorkhapatraonline.com/",
+      imageAsset: 'assets/images/news.jpg',
       color: const Color.fromARGB(255, 255, 69, 0),
     ),
     ResultsModel(
-      title: "YouTube Videos",
-      url: "https://www.youtube.com/",
-      imageAsset: 'assets/images/youtube.png',
+      title: "Kantipur News",
+      url: "https://ekantipur.com/",
+      imageAsset: 'assets/images/news.jpg',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Ratopati News",
+      url: "https://www.ratopati.com/",
+      imageAsset: 'assets/images/news.jpg',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Annapurnapost ",
+      url: "hhttps://annapurnapost.com/",
+      imageAsset: 'assets/images/news.jpg',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Setopati News",
+      url: "https://www.setopati.com/",
+      imageAsset: 'assets/images/news.jpg',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "news24nepal ",
+      url: "https://www.news24nepal.tv/",
+      imageAsset: 'assets/images/news.jpg',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Tech Pana ",
+      url: "https://www.techpana.com/",
+      imageAsset: 'assets/images/news.jpg',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Tech Pana ",
+      url: "https://www.techpana.com/",
+      imageAsset: 'assets/images/news.jpg',
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
   ];
 }
 
-class VidoesScreen extends StatelessWidget {
-  const VidoesScreen({Key? key}) : super(key: key);
+class NewsScreen extends StatelessWidget {
+  const NewsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +76,8 @@ class VidoesScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 41, 14, 141),
         appBar: AppBar(
-          title: const Text("Entertainment Videos"),
-          backgroundColor: Colors.grey[850],
+          title: const Text("Nepali News"),
+          backgroundColor: const Color.fromARGB(255, 12, 9, 37),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -62,7 +98,7 @@ class VidoesScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  color: const Color.fromARGB(255, 87, 85, 189),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

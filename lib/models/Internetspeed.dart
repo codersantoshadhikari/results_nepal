@@ -16,6 +16,18 @@ List<ResultsModel> resultsModel = [
     imageAsset: 'assets/images/speed.png',
     color: const Color.fromARGB(255, 56, 34, 3),
   ),
+  ResultsModel(
+    title: "testmy",
+    url: "https://testmy.net/results",
+    imageAsset: 'assets/images/speed.png',
+    color: const Color.fromARGB(255, 56, 34, 3),
+  ),
+  ResultsModel(
+    title: "speedof",
+    url: "https://speedof.me/",
+    imageAsset: 'assets/images/speed.png',
+    color: const Color.fromARGB(255, 56, 34, 3),
+  ),
 ];
 
 class InternetScreen extends StatelessWidget {
@@ -62,14 +74,14 @@ class InternetScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         resultsModel[index].imageAsset,
-                        height: 120,
+                        height: 100,
                       ),
                       const SizedBox(height: 10),
                       Text(
                         resultsModel[index].title,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 22,
+                          fontSize: 15,
                         ),
                       ),
                     ],

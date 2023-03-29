@@ -65,7 +65,7 @@ class ResultsModel {
     ),
     ResultsModel(
       title: "Far-Western Result",
-      url: "http://fwuexam.edu.np/Results",
+      url: "https://www.fwu.edu.np",
       imageAsset: 'assets/images/far.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
@@ -107,8 +107,19 @@ class ResultsModel {
     ),
     ResultsModel(
       title: "CTVT Result",
-      url:
-          "3eb46242aad791aefa762d89a01f631aa5c09f1c73c3bae55df33bcaaa769c33caeea5adbc48",
+      url: "https://ctevtgandaki.org.np/post/results#",
+      imageAsset: 'assets/images/man.jpg',
+      color: const Color.fromARGB(255, 147, 6, 6),
+    ),
+    ResultsModel(
+      title: "IPO Result",
+      url: "https://iporesult.cdsc.com.np",
+      imageAsset: 'assets/images/man.jpg',
+      color: const Color.fromARGB(255, 147, 6, 6),
+    ),
+    ResultsModel(
+      title: "public service commission Result",
+      url: "https://psc.gov.np",
       imageAsset: 'assets/images/man.jpg',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
@@ -123,7 +134,7 @@ class Result extends StatelessWidget {
     List<ResultsModel> result = ResultsModel.resultsModel;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 38, 38, 133),
+        backgroundColor: Colors.blue,
         appBar: AppBar(
           title: const Text(
             "Check you Result",
@@ -152,20 +163,26 @@ class Result extends StatelessWidget {
                 elevation: 6,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
-                color: const Color.fromARGB(255, 90, 88, 212),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 child: Column(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        result[index].imageAsset,
-                        height: 120,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                          result[index].imageAsset,
+                          height: 100,
+                        ),
                       ),
                     ),
-                    Text(
-                      result[index].title,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 22),
+                    Padding(
+                      padding: const EdgeInsets.all(1.0),
+                      child: Text(
+                        result[index].title,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
                     ),
                   ],
                 ),
