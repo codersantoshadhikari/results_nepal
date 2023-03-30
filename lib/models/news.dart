@@ -30,7 +30,7 @@ class ResultsModel {
     ResultsModel(
       title: "Ratopati News",
       url: "https://www.ratopati.com/",
-      imageAsset: 'assets/images/rato.png',
+      imageAsset: 'assets/images/ra.png',
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
     ResultsModel(
@@ -98,7 +98,7 @@ class NewsScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  color: const Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 234, 235, 238),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
