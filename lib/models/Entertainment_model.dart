@@ -22,6 +22,30 @@ class ResultsModel {
       color: const Color.fromARGB(255, 255, 69, 0),
     ),
     ResultsModel(
+      title: "likee Videos",
+      url: "https://likee.video/@funny_videos107/?lang=en",
+      imageAsset: 'assets/images/like.png',
+      color: const Color.fromARGB(255, 255, 69, 0),
+    ),
+    ResultsModel(
+      title: "sharechat Videos",
+      url: "https://sharechat.com/video/JpjWl58?referrer=url",
+      imageAsset: 'assets/images/sabu.png',
+      color: const Color.fromARGB(255, 255, 69, 0),
+    ),
+    ResultsModel(
+      title: "Enjoy  Moment",
+      url: "https://mojapp.in/",
+      imageAsset: 'assets/images/moj.png',
+      color: const Color.fromARGB(255, 255, 69, 0),
+    ),
+    ResultsModel(
+      title: "sharechat Videos",
+      url: "https://utreon.com/",
+      imageAsset: 'assets/images/poud.png',
+      color: const Color.fromARGB(255, 255, 69, 0),
+    ),
+    ResultsModel(
       title: "YouTube Videos",
       url: "https://www.youtube.com/",
       imageAsset: 'assets/images/youtube.png',

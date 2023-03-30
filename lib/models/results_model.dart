@@ -30,7 +30,7 @@ class ResultsModel {
     ResultsModel(
       title: "PU Result",
       url: "https://pu.edu.np/",
-      imageAsset: 'assets/images/pu.jpg',
+      imageAsset: 'assets/images/pu.png',
       color: const Color.fromARGB(255, 12, 12, 12),
     ),
     ResultsModel(
@@ -54,7 +54,7 @@ class ResultsModel {
     ResultsModel(
       title: "Purbanchal ",
       url: "https://www.puexam.edu.np/index.php/find-results",
-      imageAsset: 'assets/images/images1.jpg',
+      imageAsset: 'assets/images/pubr.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
@@ -90,13 +90,13 @@ class ResultsModel {
     ResultsModel(
       title: "Rajarshi janak university result",
       url: "https://exam.rju.edu.np/exam_results.php",
-      imageAsset: 'assets/images/janak.jpg',
+      imageAsset: 'assets/images/JANAK.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
       title: "Gandaki University Result",
       url: "GUBGMHVpwcTsPFvNNVdG5DKtpv6UwksAfzw5aULcGzgG",
-      imageAsset: 'assets/images/gan.jpg',
+      imageAsset: 'assets/images/GANDAKI.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
@@ -108,19 +108,19 @@ class ResultsModel {
     ResultsModel(
       title: "CTVT Result",
       url: "https://ctevtgandaki.org.np/post/results#",
-      imageAsset: 'assets/images/man.jpg',
+      imageAsset: 'assets/images/ctv.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
       title: "IPO Result",
       url: "https://iporesult.cdsc.com.np",
-      imageAsset: 'assets/images/man.jpg',
+      imageAsset: 'assets/images/iporesult.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
       title: "public service commission Result",
       url: "https://psc.gov.np",
-      imageAsset: 'assets/images/man.jpg',
+      imageAsset: 'assets/images/pscresult.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
   ];
@@ -163,7 +163,7 @@ class Result extends StatelessWidget {
                 elevation: 6,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 234, 235, 238),
                 child: Column(
                   children: [
                     Padding(

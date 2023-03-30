@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: const Color(0xFF3700B3),
+      backgroundColor: const Color.fromARGB(255, 36, 36, 126),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

@@ -61,12 +61,13 @@ class DrawerModel {
 }
 
 List<DrawerModel> drawerList = [
-  DrawerModel("assets/images/result.png", "Nepal Result Check", const Result()),
   DrawerModel(
-      "assets/images/form.jpg", "Apply All Category From", const FormScreen()),
+      "assets/images/homeresult.png", "Nepal Result Check", const Result()),
+  DrawerModel(
+      "assets/images/form.png", "Apply All Category From", const FormScreen()),
   DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
       const VidoesScreen()),
-  DrawerModel("assets/images/internet.jpg", "Internet Speed Test",
+  DrawerModel("assets/images/internetword.png", "Internet Speed Test",
       const InternetScreen()),
   DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
   DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),
@@ -83,9 +84,10 @@ class Component {
 }
 
 List<Component> component = [
-  Component("Result", "assets/images/result.png", const Result()),
-  Component("Form", "assets/images/form.jpg", const FormScreen()),
+  Component("Result", "assets/images/homeresult.png", const Result()),
+  Component("Form", "assets/images/form.png", const FormScreen()),
   Component(
       "Entertainment", "assets/images/entertainment.png", const VidoesScreen()),
-  Component("Internet", "assets/images/internet.jpg", const InternetScreen()),
+  Component(
+      "Internet", "assets/images/internetword.png", const InternetScreen()),
 ];

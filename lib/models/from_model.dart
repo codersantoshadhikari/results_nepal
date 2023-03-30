@@ -36,25 +36,25 @@ List<ResultsModel> resultsModel = [
   ResultsModel(
     title: "Driving  From",
     url: "https://applydl.dotm.gov.np/",
-    imageAsset: 'assets/images/policereport.png',
+    imageAsset: 'assets/images/result.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
     title: "IPO   Apply",
     url: "https://meroshare.cdsc.com.np/",
-    imageAsset: 'assets/images/policereport.png',
+    imageAsset: 'assets/images/ipoform.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
     title: "NOC   Apply",
     url: "https://noc.moest.gov.np/",
-    imageAsset: 'assets/images/policereport.png',
+    imageAsset: 'assets/images/noc.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
     title: "QR Code   Apply",
     url: "https://vaccine.mohp.gov.np/public-request-form",
-    imageAsset: 'assets/images/policereport.png',
+    imageAsset: 'assets/images/qrlogo.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
 ];
