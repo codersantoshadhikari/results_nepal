@@ -98,7 +98,7 @@ class NewsScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  color: const Color.fromARGB(255, 234, 235, 238),
+                  color: const Color.fromARGB(255, 156, 158, 165),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
