@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
-
 import '../screens/browser_screen.dart';
 
 class ResultsModel {
@@ -19,7 +17,7 @@ class ResultsModel {
   static List<ResultsModel> resultsModel = [
     ResultsModel(
       title: "TikTok Videos",
-      url: "https://www.tiktok.com/",
+      url: "https://www.tiktok.com",
       imageAsset: 'assets/images/tiktok.png',
       color: const Color.fromARGB(255, 255, 69, 0),
     ),
