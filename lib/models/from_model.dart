@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/results_model.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+import '../screens/browser_screen.dart';
 
 List<ResultsModel> resultsModel = [
   ResultsModel(
-    title: "Pan Card",
-    url: "https://taxpayerportal.ird.gov.np/taxpayer/app.html",
-    imageAsset: 'assets/images/pan.png',
-    color: const Color.fromARGB(255, 228, 58, 6),
-  ),
-  ResultsModel(
-    title: "E Passport From",
+    title: "E Passport Form",
     url: "https://emrtds.nepalpassport.gov.np/",
     imageAsset: 'assets/images/epassport.png',
     color: const Color.fromARGB(255, 55, 49, 4),
@@ -57,6 +53,12 @@ List<ResultsModel> resultsModel = [
     imageAsset: 'assets/images/qrlogo.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
+  ResultsModel(
+    title: "Pan Card",
+    url: "https://taxpayerportal.ird.gov.np/taxpayer/app.html",
+    imageAsset: 'assets/images/pan.png',
+    color: const Color.fromARGB(255, 228, 58, 6),
+  ),
 ];
 
 class FormScreen extends StatelessWidget {
@@ -67,18 +69,23 @@ class FormScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: const Text("Apply All Category From"),
+        title: const Text("Apply All Category Form"),
       ),
       body: GridView.builder(
         itemCount: resultsModel.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
         ),
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              launchUrlString(resultsModel[index].url);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => BrowserScreen(
+                        url: resultsModel[index].url,
+                        title: resultsModel[index].title,
+                      )));
             },
             child: Card(
               elevation: 6,
@@ -87,6 +94,7 @@ class FormScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 234, 235, 238),
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -108,7 +116,7 @@ class FormScreen extends StatelessWidget {
             ),
           );
         },
-      ),
+      ).p(10),
     );
   }
 }

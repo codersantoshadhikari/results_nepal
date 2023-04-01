@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/about_screen.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'model.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,62 +41,66 @@ class HomePage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 227, 231, 231),
         child: Column(
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 55, 14, 150),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CircleAvatar(
-                    maxRadius: 50,
-                    child: Image.asset("assets/images/logo.png"),
-                  ),
-                  const SizedBox(
-                    height: 3,
-                  ),
-                  const Text(
-                    "Welcome To Result Nepal ",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 242, 207, 207),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.3,
+              child: DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 55, 14, 150),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircleAvatar(
+                      maxRadius: 50,
+                      child: Image.asset("assets/images/logo.png"),
                     ),
-                  ),
-                ],
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    "Welcome To Result"
+                        .richText
+                        .size(22)
+                        .center
+                        .color(const Color.fromARGB(255, 242, 207, 207))
+                        .bold
+                        .withTextSpanChildren([
+                      const TextSpan(text: " Nepal", style: TextStyle())
+                    ]).make(),
+                  ],
+                ),
               ),
             ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: drawerList.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => drawerList[index].screen,
-                        ),
-                      );
-                    },
-                    child: ListTile(
-                      leading: Image.asset(
-                        drawerList[index].icon,
-                        height: 25,
-                        width: 50,
-                        // color: Color.fromARGB(255, 254, 252, 252),
+            ListView.builder(
+              itemCount: drawerList.length,
+              shrinkWrap: true,
+              reverse: false,
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => drawerList[index].screen,
                       ),
-                      title: Text(
-                        drawerList[index].title,
-                        style: const TextStyle(
-                            fontSize: 19,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                      ),
+                    );
+                  },
+                  child: ListTile(
+                    leading: Image.asset(
+                      drawerList[index].icon,
+                      height: 25,
+                      width: 50,
+                      // color: Color.fromARGB(255, 254, 252, 252),
                     ),
-                  );
-                },
-              ),
+                    title: Text(
+                      drawerList[index].title,
+                      style: const TextStyle(
+                          fontSize: 19,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
-import 'models/Entertainment_model.dart';
-import 'models/Internetspeed.dart';
+import 'models/entertainment_model.dart';
+import 'models/internet_speed.dart';
 import 'models/contact_screen.dart';
 import 'models/news.dart';
 

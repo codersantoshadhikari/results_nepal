@@ -39,7 +39,7 @@ class AboutScreen extends StatelessWidget {
               const SizedBox(height: 16),
               Center(child: _buildSectionTitle('Apply form')),
               const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Entertainment Vidoes')),
+              Center(child: _buildSectionTitle('Entertainment Videos')),
               const SizedBox(height: 16),
               Center(child: _buildSectionTitle('Internet speed check')),
               const SizedBox(height: 70),

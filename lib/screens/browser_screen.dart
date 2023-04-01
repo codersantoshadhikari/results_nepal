@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class BrowserScreen extends StatefulWidget {
-  const BrowserScreen({Key? key, required this.url}) : super(key: key);
+  const BrowserScreen({Key? key, required this.url, required this.title})
+      : super(key: key);
 
   final String url;
+  final String title;
 
   @override
   State<BrowserScreen> createState() => _BrowserScreenState();
@@ -13,14 +16,13 @@ class BrowserScreen extends StatefulWidget {
 class _BrowserScreenState extends State<BrowserScreen> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(20),
-          child: WebViewWidget(
-            controller: WebViewController()..loadRequest(Uri.parse(widget.url)),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: widget.title.text.make(),
+      ),
+      body: SafeArea(
+        child: WebViewWidget(
+          controller: WebViewController()..loadRequest(Uri.parse(widget.url)),
         ),
       ),
     );

@@ -3,6 +3,8 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 import 'package:resultnepal/models/results_model.dart';
 
+import '../screens/browser_screen.dart';
+
 List<ResultsModel> resultsModel = [
   ResultsModel(
     title: "Fast",
@@ -11,19 +13,19 @@ List<ResultsModel> resultsModel = [
     color: const Color.fromARGB(255, 176, 7, 7),
   ),
   ResultsModel(
-    title: "Speed",
+    title: "SpeedTest",
     url: "https://www.speedtest.net/",
     imageAsset: 'assets/images/speed.png',
     color: const Color.fromARGB(255, 56, 34, 3),
   ),
   ResultsModel(
-    title: "testmy",
+    title: "Testmy",
     url: "https://testmy.net/results",
     imageAsset: 'assets/images/speed.png',
     color: const Color.fromARGB(255, 56, 34, 3),
   ),
   ResultsModel(
-    title: "speedof",
+    title: "Speedof",
     url: "https://speedof.me/",
     imageAsset: 'assets/images/speed.png',
     color: const Color.fromARGB(255, 56, 34, 3),
@@ -37,7 +39,7 @@ class InternetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 4, 4, 85),
+        backgroundColor: const Color.fromARGB(255, 4, 4, 85),
         appBar: AppBar(
           title: const Text(
             "Check Your Internet Speed",
@@ -50,7 +52,7 @@ class InternetScreen extends StatelessWidget {
           backgroundColor: Colors.black,
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
+          padding: const EdgeInsets.all(10),
           child: GridView.builder(
             itemCount: resultsModel.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -61,14 +63,21 @@ class InternetScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  launchUrlString(resultsModel[index].url);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => BrowserScreen(
+                        url: resultsModel[index].url,
+                        title: resultsModel[index].title,
+                      ),
+                    ),
+                  );
                 },
                 child: Card(
                   elevation: 6,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   ),
-                  color: Color.fromARGB(255, 91, 44, 145),
+                  color: const Color.fromARGB(255, 91, 44, 145),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -81,6 +90,7 @@ class InternetScreen extends StatelessWidget {
                         resultsModel[index].title,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                           fontSize: 15,
                         ),
                       ),

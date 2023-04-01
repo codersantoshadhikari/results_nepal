@@ -1,6 +1,7 @@
-//ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../screens/browser_screen.dart';
 
 class ResultsModel {
   final String title;
@@ -29,7 +30,7 @@ class ResultsModel {
       color: const Color.fromARGB(255, 255, 69, 0),
     ),
     ResultsModel(
-      title: "sharechat Videos",
+      title: "Sharechat Videos",
       url: "https://sharechat.com/video/JpjWl58?referrer=url",
       imageAsset: 'assets/images/sabu.png',
       color: const Color.fromARGB(255, 255, 69, 0),
@@ -41,7 +42,7 @@ class ResultsModel {
       color: const Color.fromARGB(255, 255, 69, 0),
     ),
     ResultsModel(
-      title: "sharechat Videos",
+      title: "Sharechat Videos",
       url: "https://utreon.com/",
       imageAsset: 'assets/images/poud.png',
       color: const Color.fromARGB(255, 255, 69, 0),
@@ -61,54 +62,60 @@ class VidoesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<ResultsModel> result = ResultsModel.resultsModel;
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 41, 14, 141),
-        appBar: AppBar(
-          title: const Text("Entertainment Videos"),
-          backgroundColor: Colors.grey[850],
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: GridView.builder(
-            itemCount: result.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 16,
-              crossAxisSpacing: 16,
-            ),
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  launchUrlString(result[index].url);
-                },
-                child: Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  color: const Color.fromARGB(255, 87, 85, 189),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        result[index].imageAsset,
-                        height: 100,
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        result[index].title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              );
-            },
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 41, 14, 141),
+      appBar: AppBar(
+        title: const Text("Entertainment Videos"),
+        backgroundColor: Colors.grey[850],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: GridView.builder(
+          itemCount: result.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
           ),
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => BrowserScreen(
+                      url: result[index].url,
+                      title: result[index].title,
+                    ),
+                  ),
+                );
+              },
+              child: Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                color: const Color.fromARGB(255, 87, 85, 189),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      result[index].imageAsset,
+                      height: 100,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      result[index].title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
         ),
       ),
     );
