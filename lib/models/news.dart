@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+
+import '../screens/browser_screen.dart';
 
 class ResultsModel {
   final String title;
@@ -35,7 +36,7 @@ class ResultsModel {
     ),
     ResultsModel(
       title: "Annapurnapost ",
-      url: "hhttps://annapurnapost.com/",
+      url: "https://annapurnapost.com/",
       imageAsset: 'assets/images/anupa.png',
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
@@ -49,12 +50,6 @@ class ResultsModel {
       title: "news24nepal ",
       url: "https://www.news24nepal.tv/",
       imageAsset: 'assets/images/news24.png',
-      color: const Color.fromARGB(255, 205, 32, 31),
-    ),
-    ResultsModel(
-      title: "Tech Pana ",
-      url: "https://www.techpana.com/",
-      imageAsset: 'assets/images/tech.png',
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
     ResultsModel(
@@ -91,7 +86,14 @@ class NewsScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  launchUrlString(result[index].url);
+                  // launchUrlString(result[index].url);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BrowserScreen(
+                                url: result[index].url,
+                                title: result[index].title,
+                              )));
                 },
                 child: Card(
                   elevation: 4,

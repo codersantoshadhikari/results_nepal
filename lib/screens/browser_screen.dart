@@ -22,7 +22,9 @@ class _BrowserScreenState extends State<BrowserScreen> {
       ),
       body: SafeArea(
         child: WebViewWidget(
-          controller: WebViewController()..loadRequest(Uri.parse(widget.url)),
+          controller: WebViewController()
+            ..setJavaScriptMode(JavaScriptMode.unrestricted)
+            ..loadRequest(Uri.parse(widget.url)),
         ),
       ),
     );

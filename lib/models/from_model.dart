@@ -18,7 +18,7 @@ List<ResultsModel> resultsModel = [
     color: const Color.fromARGB(255, 41, 31, 2),
   ),
   ResultsModel(
-    title: "Election ",
+    title: "Election Form ",
     url: "https://election.gov.np/en",
     imageAsset: 'assets/images/Election.png',
     color: const Color.fromARGB(255, 19, 18, 19),
@@ -30,25 +30,25 @@ List<ResultsModel> resultsModel = [
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
-    title: "Driving  From",
+    title: "Driving  License",
     url: "https://applydl.dotm.gov.np/",
     imageAsset: 'assets/images/result.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
-    title: "IPO   Apply",
+    title: "IPO Apply",
     url: "https://meroshare.cdsc.com.np/",
     imageAsset: 'assets/images/ipoform.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
-    title: "NOC   Apply",
+    title: "NOC Apply",
     url: "https://noc.moest.gov.np/",
     imageAsset: 'assets/images/noc.png',
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
-    title: "QR Code   Apply",
+    title: "QR Code Apply",
     url: "https://vaccine.mohp.gov.np/public-request-form",
     imageAsset: 'assets/images/qrlogo.png',
     color: const Color.fromARGB(255, 244, 123, 3),

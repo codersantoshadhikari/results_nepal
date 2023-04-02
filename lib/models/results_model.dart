@@ -77,7 +77,7 @@ class ResultsModel {
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
-      title: "Agriculture @ Forestry Result ",
+      title: "Agriculture Forestry Result ",
       url: "https://afuexam.edu.np/results",
       imageAsset: 'assets/images/agr.png',
       color: const Color.fromARGB(255, 147, 6, 6),
@@ -96,7 +96,7 @@ class ResultsModel {
     ),
     ResultsModel(
       title: "Gandaki University Result",
-      url: "GUBGMHVpwcTsPFvNNVdG5DKtpv6UwksAfzw5aULcGzgG",
+      url: "https://www.gandakiuniversity.edu.np/",
       imageAsset: 'assets/images/GANDAKI.png',
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
@@ -178,7 +178,7 @@ class Result extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
                         result[index].imageAsset,
-                        height: 100,
+                        height: 60,
                       ),
                     ),
                   ),
