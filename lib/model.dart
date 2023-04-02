@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
+import 'models/Languagetrf.dart';
+import 'models/datecon_screen.dart';
 import 'models/entertainment_model.dart';
 import 'models/internet_speed.dart';
 import 'models/contact_screen.dart';
@@ -67,6 +70,10 @@ List<DrawerModel> drawerList = [
       "assets/images/form.png", "Apply All Category From", const FormScreen()),
   DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
       const VidoesScreen()),
+  DrawerModel("assets/images/news.jpg", "English To Nepali date Converter",
+      const dateconverterScreen()),
+  DrawerModel("assets/images/news.jpg", "English To Nepali language Converter",
+      language_Screen()),
   DrawerModel("assets/images/internetword.png", "Internet Speed Test",
       const InternetScreen()),
   DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),

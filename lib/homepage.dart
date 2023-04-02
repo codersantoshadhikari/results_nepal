@@ -39,11 +39,10 @@ class HomePage extends StatelessWidget {
       ),
       drawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 227, 231, 231),
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.3,
-              child: DrawerHeader(
+        child: Expanded(
+          child: Column(
+            children: [
+              DrawerHeader(
                 decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 55, 14, 150),
                 ),
@@ -59,7 +58,7 @@ class HomePage extends StatelessWidget {
                     ),
                     "Welcome To Result"
                         .richText
-                        .size(22)
+                        .size(23)
                         .center
                         .color(const Color.fromARGB(255, 242, 207, 207))
                         .bold
@@ -69,40 +68,40 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            ListView.builder(
-              itemCount: drawerList.length,
-              shrinkWrap: true,
-              reverse: false,
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => drawerList[index].screen,
+              ListView.builder(
+                itemCount: drawerList.length,
+                shrinkWrap: true,
+                reverse: false,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => drawerList[index].screen,
+                        ),
+                      );
+                    },
+                    child: ListTile(
+                      leading: Image.asset(
+                        drawerList[index].icon,
+                        height: 25,
+                        width: 50,
+                        // color: Color.fromARGB(255, 254, 252, 252),
                       ),
-                    );
-                  },
-                  child: ListTile(
-                    leading: Image.asset(
-                      drawerList[index].icon,
-                      height: 25,
-                      width: 50,
-                      // color: Color.fromARGB(255, 254, 252, 252),
+                      title: Text(
+                        drawerList[index].title,
+                        style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    title: Text(
-                      drawerList[index].title,
-                      style: const TextStyle(
-                          fontSize: 19,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ],
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
       backgroundColor: const Color.fromARGB(255, 36, 36, 126),
