@@ -39,10 +39,11 @@ class HomePage extends StatelessWidget {
       ),
       drawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 227, 231, 231),
-        child: Expanded(
-          child: Column(
-            children: [
-              DrawerHeader(
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.33,
+              child: DrawerHeader(
                 decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 55, 14, 150),
                 ),
@@ -56,19 +57,20 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       height: 3,
                     ),
-                    "Welcome To Result"
-                        .richText
+                    "Welcome To Result Nepal"
+                        .text
                         .size(23)
                         .center
                         .color(const Color.fromARGB(255, 242, 207, 207))
                         .bold
-                        .withTextSpanChildren([
-                      const TextSpan(text: " Nepal", style: TextStyle())
-                    ]).make(),
+                        .make(),
                   ],
                 ),
               ),
-              ListView.builder(
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.67,
+              child: ListView.builder(
                 itemCount: drawerList.length,
                 shrinkWrap: true,
                 reverse: false,
@@ -100,8 +102,8 @@ class HomePage extends StatelessWidget {
                   );
                 },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       backgroundColor: const Color.fromARGB(255, 36, 36, 126),
