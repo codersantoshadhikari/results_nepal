@@ -21,6 +21,7 @@ class _ContactScreenState extends State<ContactScreen> {
 
     return Scaffold(
       body: Container(
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -33,66 +34,69 @@ class _ContactScreenState extends State<ContactScreen> {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(1),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'Name',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const TextField(),
-              const SizedBox(height: 10),
-              const Text(
-                'Email',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const TextField(),
-              const SizedBox(height: 10),
-              const Text(
-                'Subject',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const TextField(),
-              const SizedBox(height: 10),
-              const Text(
-                'Message..',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const TextField(),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  launchEmailApp(
-                    context,
-                    'adhikarisantosh039@gmail.com',
-                  );
-                },
-                child: const Text(
-                  'Send message',
+          padding: const EdgeInsets.all(0.1),
+          child: SingleChildScrollView(
+            reverse: true,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'Name',
                   style: TextStyle(
+                    color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              )
-            ],
+                const TextField(),
+                const SizedBox(height: 10),
+                const Text(
+                  'Email',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const TextField(),
+                const SizedBox(height: 10),
+                const Text(
+                  'Subject',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const TextField(),
+                const SizedBox(height: 10),
+                const Text(
+                  'Message..',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const TextField(),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    launchEmailApp(
+                      context,
+                      'adhikarisantosh039@gmail.com',
+                    );
+                  },
+                  child: const Text(
+                    'Send message',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

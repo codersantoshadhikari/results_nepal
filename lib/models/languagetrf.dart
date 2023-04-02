@@ -138,7 +138,7 @@ class _language_ScreenState extends State<language_Screen> {
                     const Text("From"),
                     // Create DropDown
                     SizedBox(
-                      width: 140,
+                      width: 120,
                       child: DropdownButton<String>(
                         isExpanded: true,
                         value: dropdownValueForTranslateFrom,
