@@ -36,12 +36,12 @@ class _ContactScreenState extends State<ContactScreen> {
         child: Padding(
           padding: const EdgeInsets.all(0.1),
           child: SingleChildScrollView(
-            reverse: true,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 60),
                 const Text(
-                  'Name',
+                  "Name",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
