@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:translator/translator.dart';
 
+// ignore: camel_case_types
 class language_Screen extends StatefulWidget {
+  const language_Screen({super.key});
+
   // const language_Screen({super.key});
 
   @override
   State<language_Screen> createState() => _language_ScreenState();
 }
 
+// ignore: camel_case_types
 class _language_ScreenState extends State<language_Screen> {
   String translateText = "";
   TextEditingController englishController = TextEditingController();

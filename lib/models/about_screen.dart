@@ -6,7 +6,7 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Result Nepal Application About'),
+        title: const Text(' Application About'),
         backgroundColor: const Color.fromARGB(255, 77, 7, 255),
       ),
       body: Container(
@@ -35,14 +35,22 @@ class AboutScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('All Results Check')),
+              Center(
+                  child:
+                      _buildSectionTitle('English To Nepali date Converter')),
               const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Apply form')),
+              Center(child: _buildSectionTitle('Apply All Category From')),
               const SizedBox(height: 16),
               Center(child: _buildSectionTitle('Entertainment Videos')),
               const SizedBox(height: 16),
               Center(child: _buildSectionTitle('Internet speed check')),
-              const SizedBox(height: 70),
+              const SizedBox(height: 16),
+              Center(child: _buildSectionTitle('Language Translator')),
+              const SizedBox(height: 16),
+              Center(child: _buildSectionTitle('All Results Check')),
+              const SizedBox(height: 16),
+              Center(child: _buildSectionTitle('Nepali News')),
+              const SizedBox(height: 30),
               Center(child: _buildSectionTitle('Developer About:')),
               const SizedBox(height: 10),
               Center(child: _buildListTile('SANTOSH ADHIKARI')),
@@ -53,7 +61,7 @@ class AboutScreen extends StatelessWidget {
               Center(
                   child: _buildListTile(
                       'Email Id : adhikarisantosh039@gmail.com')),
-              const SizedBox(height: 60),
+              const SizedBox(height: 5),
               const Center(
                 child: Text(
                   'Thank you for using this application!',

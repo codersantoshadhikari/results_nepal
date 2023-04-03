@@ -5,26 +5,26 @@ import '../screens/browser_screen.dart';
 List<ResultsModel> resultsModel = [
   ResultsModel(
     title: "Fast",
-    imageAsset: 'assets/images/fast.png',
+    imageAsset: 'assets/images/speed.png',
     url: "https://fast.com/",
     color: const Color.fromARGB(255, 176, 7, 7),
   ),
   ResultsModel(
-    title: "SpeedTest",
+    title: "Speed ",
     url: "https://www.speedtest.net/",
-    imageAsset: 'assets/images/speed.png',
+    imageAsset: 'assets/images/111.png',
     color: const Color.fromARGB(255, 56, 34, 3),
   ),
   ResultsModel(
     title: "Testmy",
     url: "https://testmy.net/results",
-    imageAsset: 'assets/images/speed.png',
+    imageAsset: 'assets/images/fast.png',
     color: const Color.fromARGB(255, 56, 34, 3),
   ),
   ResultsModel(
     title: "Speedof",
     url: "https://speedof.me/",
-    imageAsset: 'assets/images/speed.png',
+    imageAsset: 'assets/images/112.jpg',
     color: const Color.fromARGB(255, 56, 34, 3),
   ),
 ];

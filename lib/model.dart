@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
 import 'models/Languagetrf.dart';
@@ -70,11 +69,11 @@ List<DrawerModel> drawerList = [
       "assets/images/form.png", "Apply All Category From", const FormScreen()),
   DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
       const VidoesScreen()),
-  DrawerModel("assets/images/news.jpg", "English To Nepali date Converter",
+  DrawerModel("assets/images/dateeng.png", "English To Nepali date Converter",
       const dateconverterScreen()),
-  DrawerModel("assets/images/news.jpg", "English To Nepali language Converter",
-      language_Screen()),
-  DrawerModel("assets/images/internetword.png", "Internet Speed Test",
+  DrawerModel(
+      "assets/images/language.png", "Language Translator", language_Screen()),
+  DrawerModel("assets/images/mainloginternet.png", "Internet Speed Test",
       const InternetScreen()),
   DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
   DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),

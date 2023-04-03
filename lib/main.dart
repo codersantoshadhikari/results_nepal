@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "NEPAL WEBSITE",
+      title: "NEPAL RESULT",
       // theme: ThemeData(),
       home: HomePage(),
     );

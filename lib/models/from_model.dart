@@ -6,6 +6,24 @@ import '../screens/browser_screen.dart';
 
 List<ResultsModel> resultsModel = [
   ResultsModel(
+    title: "Driving  License",
+    url: "https://applydl.dotm.gov.np/",
+    imageAsset: 'assets/images/result.png',
+    color: const Color.fromARGB(255, 244, 123, 3),
+  ),
+  ResultsModel(
+    title: "Pan Card",
+    url: "https://taxpayerportal.ird.gov.np/taxpayer/app.html",
+    imageAsset: 'assets/images/pan.png',
+    color: const Color.fromARGB(255, 228, 58, 6),
+  ),
+  ResultsModel(
+    title: "Police Report",
+    url: "https://opcr.nepalpolice.gov.np/#/login",
+    imageAsset: 'assets/images/policereport.png',
+    color: const Color.fromARGB(255, 244, 123, 3),
+  ),
+  ResultsModel(
     title: "E Passport Form",
     url: "https://emrtds.nepalpassport.gov.np/",
     imageAsset: 'assets/images/epassport.png',
@@ -30,12 +48,6 @@ List<ResultsModel> resultsModel = [
     color: const Color.fromARGB(255, 244, 123, 3),
   ),
   ResultsModel(
-    title: "Driving  License",
-    url: "https://applydl.dotm.gov.np/",
-    imageAsset: 'assets/images/result.png',
-    color: const Color.fromARGB(255, 244, 123, 3),
-  ),
-  ResultsModel(
     title: "IPO Apply",
     url: "https://meroshare.cdsc.com.np/",
     imageAsset: 'assets/images/ipoform.png',
@@ -52,12 +64,6 @@ List<ResultsModel> resultsModel = [
     url: "https://vaccine.mohp.gov.np/public-request-form",
     imageAsset: 'assets/images/qrlogo.png',
     color: const Color.fromARGB(255, 244, 123, 3),
-  ),
-  ResultsModel(
-    title: "Pan Card",
-    url: "https://taxpayerportal.ird.gov.np/taxpayer/app.html",
-    imageAsset: 'assets/images/pan.png',
-    color: const Color.fromARGB(255, 228, 58, 6),
   ),
 ];
 
