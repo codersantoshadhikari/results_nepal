@@ -207,7 +207,7 @@ class _language_ScreenState extends State<language_Screen> {
                           borderRadius: BorderRadius.circular(30))),
                 ),
                 MaterialButton(
-                    color: const Color.fromARGB(255, 105, 80, 5),
+                    color: const Color.fromARGB(255, 103, 40, 145),
                     onPressed: () {
                       String to = country[dropdownValueForTranslateTo]!;
                       String from = country[dropdownValueForTranslateFrom]!;
@@ -221,6 +221,18 @@ class _language_ScreenState extends State<language_Screen> {
                   translateText,
                   style: const TextStyle(fontSize: 25),
                 ),
+                translateText == ""
+                    ? const Text("")
+                    : ElevatedButton(
+                        style: const ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                            Color.fromARGB(255, 103, 40, 145),
+                          ),
+                        ),
+                        onPressed: () {
+                          Clipboard.setData(ClipboardData(text: translateText));
+                        },
+                        child: const Text("Copy Text")),
               ],
             ),
           ),

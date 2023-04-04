@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../screens/browser_screen.dart';
 
 class ResultsModel {

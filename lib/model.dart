@@ -71,8 +71,8 @@ List<DrawerModel> drawerList = [
       const VidoesScreen()),
   DrawerModel("assets/images/dateeng.png", "English To Nepali date Converter",
       const dateconverterScreen()),
-  DrawerModel(
-      "assets/images/language.png", "Language Translator", language_Screen()),
+  DrawerModel("assets/images/language.png", "Language Translator",
+      const language_Screen()),
   DrawerModel("assets/images/mainloginternet.png", "Internet Speed Test",
       const InternetScreen()),
   DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
