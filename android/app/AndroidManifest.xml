@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.test_project">
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+     <uses-permission android:name="android.permission.INTERNET" />
 <queries>
     <intent>
         <action android:name="android.intent.action.VIEW" />
@@ -17,7 +18,7 @@
 </queries>
    <application
         android:label="test_project"
-        android:name="${applicationName}"
+        android:name="Results Nepal"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

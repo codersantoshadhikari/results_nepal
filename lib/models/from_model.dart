@@ -18,12 +18,6 @@ List<ResultsModel> resultsModel = [
     color: const Color.fromARGB(255, 228, 58, 6),
   ),
   ResultsModel(
-    title: "Police Report",
-    url: "https://opcr.nepalpolice.gov.np/#/login",
-    imageAsset: 'assets/images/policereport.png',
-    color: const Color.fromARGB(255, 244, 123, 3),
-  ),
-  ResultsModel(
     title: "E Passport Form",
     url: "https://emrtds.nepalpassport.gov.np/",
     imageAsset: 'assets/images/epassport.png',
