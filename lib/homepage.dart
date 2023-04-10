@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
               );
             },
             icon: const Icon(Icons.info,
-                color: Color.fromARGB(255, 253, 253, 253)),
+                color: Color.fromARGB(255, 215, 208, 208)),
           )
         ],
         elevation: 0,
