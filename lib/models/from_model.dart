@@ -24,6 +24,12 @@ List<ResultsModel> resultsModel = [
     color: const Color.fromARGB(255, 55, 49, 4),
   ),
   ResultsModel(
+    title: "Pharmacy Council",
+    url: "https://www.nepalpharmacycouncil.org.np/",
+    imageAsset: 'assets/images/farm.png',
+    color: const Color.fromARGB(255, 55, 49, 4),
+  ),
+  ResultsModel(
     title: "National ID Card",
     url: "https://enrollment.donidcr.gov.np/PreEnrollment/",
     imageAsset: 'assets/images/nationalid.png',

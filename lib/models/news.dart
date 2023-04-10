@@ -28,6 +28,30 @@ class ResultsModel {
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
     ResultsModel(
+      title: "kathmandu post  ",
+      url: "https://kathmandupost.com/",
+      imageAsset: 'assets/images/kathmandu.png',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "The Himalayan ",
+      url: "https://thehimalayantimes.com/",
+      imageAsset: 'assets/images/him.png',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Tech Pana ",
+      url: "https://www.techpana.com/",
+      imageAsset: 'assets/images/tech.png',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
+      title: "Nepali Sansar   ",
+      url: "https://www.nepalisansar.com/news/",
+      imageAsset: 'assets/images/npnews.png',
+      color: const Color.fromARGB(255, 205, 32, 31),
+    ),
+    ResultsModel(
       title: "Ratopati News",
       url: "https://www.ratopati.com/",
       imageAsset: 'assets/images/ra.png',
@@ -49,12 +73,6 @@ class ResultsModel {
       title: "news24nepal ",
       url: "https://www.news24nepal.tv/",
       imageAsset: 'assets/images/news24.png',
-      color: const Color.fromARGB(255, 205, 32, 31),
-    ),
-    ResultsModel(
-      title: "Tech Pana ",
-      url: "https://www.techpana.com/",
-      imageAsset: 'assets/images/tech.png',
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
   ];
