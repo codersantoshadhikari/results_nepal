@@ -30,49 +30,47 @@ class AboutScreen extends StatelessWidget {
           ],
         ),
         padding: const EdgeInsets.all(16),
-        child: SizedBox(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 16),
-              Center(
-                  child:
-                      _buildSectionTitle('English To Nepali date Converter')),
-              const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Apply All Category From')),
-              const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Entertainment Videos')),
-              const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Internet speed check')),
-              const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Language Translator')),
-              const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('All Results Check')),
-              const SizedBox(height: 16),
-              Center(child: _buildSectionTitle('Nepali News')),
-              const SizedBox(height: 30),
-              Center(child: _buildSectionTitle('Developer About:')),
-              const SizedBox(height: 10),
-              Center(child: _buildListTile('SANTOSH ADHIKARI')),
-              Center(child: _buildListTile('Address Pokhara, Nepal')),
-              Center(child: _buildListTile('GitHub ID: Santoshadhikary')),
-              Center(
-                  child: _buildListTile('Website : santoshadhikari.name.np')),
-              Center(
-                  child: _buildListTile(
-                      'Email Id : adhikarisantosh039@gmail.com')),
-              const SizedBox(height: 5),
-              const Center(
-                child: Text(
-                  'Thank you for using this application!',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 16),
+            Center(
+                child: _buildSectionTitle(
+              'English To Nepali date Converter',
+            )),
+            const SizedBox(height: 12),
+            Center(child: _buildSectionTitle('Apply All Category From')),
+            const SizedBox(height: 12),
+            Center(child: _buildSectionTitle('Entertainment Videos')),
+            const SizedBox(height: 16),
+            Center(child: _buildSectionTitle('Internet speed check')),
+            const SizedBox(height: 16),
+            Center(child: _buildSectionTitle('Language Translator')),
+            const SizedBox(height: 16),
+            Center(child: _buildSectionTitle('All Results Check')),
+            const SizedBox(height: 16),
+            Center(child: _buildSectionTitle('Nepali News')),
+            const SizedBox(height: 30),
+            Center(child: _buildSectionTitle('Developer About:')),
+            const SizedBox(height: 10),
+            Center(child: _buildListTile('SANTOSH ADHIKARI')),
+            Center(child: _buildListTile('Address Pokhara, Nepal')),
+            Center(child: _buildListTile('GitHub ID: Santoshadhikary')),
+            Center(child: _buildListTile('Website : santoshadhikari.name.np')),
+            Center(
+                child:
+                    _buildListTile('Email Id : adhikarisantosh039@gmail.com')),
+            const SizedBox(height: 5),
+            const Center(
+              child: Text(
+                'Thank you for using this application!',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -82,9 +80,9 @@ class AboutScreen extends StatelessWidget {
     return Text(
       title,
       style: const TextStyle(
-        fontSize: 20,
+        fontSize: 16,
         fontWeight: FontWeight.bold,
-        color: Colors.indigo,
+        color: Colors.black,
       ),
     );
   }

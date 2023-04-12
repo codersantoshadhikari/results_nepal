@@ -10,11 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "NEPAL RESULT",
-      // theme: ThemeData(),
-      home: HomePage(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.blue,
+      ),
+      home:const HomePage(),
     );
   }
 }

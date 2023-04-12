@@ -54,7 +54,7 @@ class ResultsModel {
     ResultsModel(
       title: "Ratopati News",
       url: "https://www.ratopati.com/",
-      imageAsset: 'assets/images/ra.png',
+      imageAsset: 'assets/images/rato.png',
       color: const Color.fromARGB(255, 205, 32, 31),
     ),
     ResultsModel(
@@ -86,7 +86,7 @@ class NewsScreen extends StatelessWidget {
     List<ResultsModel> result = ResultsModel.resultsModel;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 41, 14, 141),
+        // backgroundColor: const Color.fromARGB(255, 41, 14, 141),
         appBar: AppBar(
           title: const Text("Nepali News"),
           backgroundColor: const Color.fromARGB(255, 12, 9, 37),
@@ -117,7 +117,7 @@ class NewsScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  color: const Color.fromARGB(255, 156, 158, 165),
+                  // color: const Color.fromARGB(255, 156, 158, 165),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

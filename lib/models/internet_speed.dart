@@ -36,7 +36,7 @@ class InternetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 4, 4, 85),
+        // backgroundColor: const Color.fromARGB(255, 4, 4, 85),
         appBar: AppBar(
           title: const Text(
             "Check Your Internet Speed",
@@ -46,10 +46,10 @@ class InternetScreen extends StatelessWidget {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.black,
+          // backgroundColor: Colors.black,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
           child: GridView.builder(
             itemCount: resultsModel.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -74,7 +74,7 @@ class InternetScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   ),
-                  color: const Color.fromARGB(255, 91, 44, 145),
+                  // color: const Color.fromARGB(255, 91, 44, 145),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -87,7 +87,7 @@ class InternetScreen extends StatelessWidget {
                         resultsModel[index].title,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 7, 0, 0),
                           fontSize: 15,
                         ),
                       ),

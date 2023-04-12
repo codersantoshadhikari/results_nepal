@@ -134,7 +134,7 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     List<ResultsModel> result = ResultsModel.resultsModel;
     return Scaffold(
-      backgroundColor: Colors.blue,
+      // backgroundColor: Colors.blue,
       appBar: AppBar(
         title: const Text(
           "Check Your Result",

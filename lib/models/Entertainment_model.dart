@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import '../screens/browser_screen.dart';
 
@@ -61,10 +62,10 @@ class VidoesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<ResultsModel> result = ResultsModel.resultsModel;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 41, 14, 141),
+      // backgroundColor: const Color.fromARGB(255, 41, 14, 141),
       appBar: AppBar(
         title: const Text("Entertainment Videos"),
-        backgroundColor: Colors.grey[850],
+        // backgroundColor: Colors.grey[850],
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -92,7 +93,7 @@ class VidoesScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: const Color.fromARGB(255, 87, 85, 189),
+                // color: const Color.fromARGB(255, 87, 85, 189),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -106,7 +107,7 @@ class VidoesScreen extends StatelessWidget {
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 8, 0, 0),
                       ),
                     ),
                   ],
