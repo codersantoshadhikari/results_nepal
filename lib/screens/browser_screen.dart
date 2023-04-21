@@ -14,18 +14,47 @@ class BrowserScreen extends StatefulWidget {
 }
 
 class _BrowserScreenState extends State<BrowserScreen> {
+  int myprogress = 0;
+  late final WebViewController controller;
+
+  bool isLoading = true;
+  final _key = UniqueKey();
+
+  @override
+  void initState() {
+    super.initState();
+    controller = WebViewController()
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onPageFinished: (String url) {
+            setState(() {
+              isLoading = false;
+            });
+          },
+          onWebResourceError: (WebResourceError error) {
+            const Text("somethgin wrng");
+          },
+        ),
+      )
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(widget.url));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: widget.title.text.make(),
       ),
-      body: SafeArea(
-        child: WebViewWidget(
-          controller: WebViewController()
-            ..setJavaScriptMode(JavaScriptMode.unrestricted)
-            ..loadRequest(Uri.parse(widget.url)),
-        ),
+      body: Stack(
+        children: [
+          WebViewWidget(key: _key, controller: controller),
+          isLoading
+              ? const Center(
+                  child: CircularProgressIndicator.adaptive(),
+                )
+              : Stack()
+        ],
       ),
     );
   }
