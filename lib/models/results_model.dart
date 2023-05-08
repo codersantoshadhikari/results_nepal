@@ -107,7 +107,7 @@ class ResultsModel {
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
     ResultsModel(
-      title: "CTVT Result",
+      title: "CTEVT Result",
       url: "https://ctevtgandaki.org.np/post/results#",
       imageAsset: 'assets/images/ctv.png',
       color: const Color.fromARGB(255, 147, 6, 6),
