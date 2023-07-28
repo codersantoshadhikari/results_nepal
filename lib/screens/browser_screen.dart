@@ -53,7 +53,7 @@ class _BrowserScreenState extends State<BrowserScreen> {
               ? const Center(
                   child: CircularProgressIndicator.adaptive(),
                 )
-              : Stack()
+              : const Stack()
         ],
       ),
     );
