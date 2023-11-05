@@ -1,12 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     package="com.santoshadhikari.resultnepal">
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
-     <uses-permission android:name="android.permission.INTERNET" />
-=======
-    package="com.example.resultnepal">
     <uses-permission android:name="android.permission.INTERNET" />
->>>>>>> 6be2f8388d518b2cdade4277952916b739b1c110
    <application
         android:label="Results Nepal"
         android:name="${applicationName}"
