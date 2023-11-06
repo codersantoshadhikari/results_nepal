@@ -56,12 +56,12 @@ class _dateconverterScreenState extends State<dateconverterScreen> {
               onPressed: () {
                 _changeDate(context);
               },
-              child: const Text("Change Date"),
               textColor: Colors.white,
               color: Colors.deepPurple,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
+              child: const Text("Change Date"),
             ),
             const SizedBox(height: 30.0),
             InkWell(

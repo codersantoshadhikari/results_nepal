@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
-import 'models/Languagetrf.dart';
 import 'models/datecon_screen.dart';
 import 'models/entertainment_model.dart';
 import 'models/internet_speed.dart';
@@ -27,6 +26,15 @@ class ReadBox extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(1.0),
       child: Container(
+        height: 100,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: color,
+          image: DecorationImage(
+            image: AssetImage(imageAsset),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -38,15 +46,6 @@ class ReadBox extends StatelessWidget {
                 color: Colors.deepPurple,
               ),
             ),
-          ),
-        ),
-        height: 100,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: color,
-          image: DecorationImage(
-            image: AssetImage(imageAsset),
-            fit: BoxFit.cover,
           ),
         ),
       ),
@@ -71,10 +70,9 @@ List<DrawerModel> drawerList = [
       const VidoesScreen()),
   DrawerModel("assets/images/dateeng.png", "English To Nepali date Converter",
       const dateconverterScreen()),
-  DrawerModel("assets/images/language.png", "Language Translator",
-      const language_Screen()),
-  DrawerModel("assets/images/mainloginternet.png", "Internet Speed Test",
-      const InternetScreen()),
+  // DrawerModel("assets/images/language.png", "Language Translator", const ()),
+  // DrawerModel("assets/images/mainloginternet.png", "Internet Speed Test",
+  // const InternetScreen()),
   DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
   DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),
 ];
