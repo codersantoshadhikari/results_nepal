@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:resultnepal/models/from_model.dart';
-import 'package:resultnepal/models/results_model.dart';
-import 'models/datecon_screen.dart';
-import 'models/entertainment_model.dart';
-import 'models/internet_speed.dart';
-import 'models/contact_screen.dart';
-import 'models/news.dart';
+
+import 'results_model.dart';
 
 class ReadBox extends StatelessWidget {
   final String title;
@@ -61,22 +56,6 @@ class DrawerModel {
   DrawerModel(this.icon, this.title, this.screen);
 }
 
-List<DrawerModel> drawerList = [
-  DrawerModel(
-      "assets/images/homeresult.png", "Nepal Result Check", const Result()),
-  DrawerModel(
-      "assets/images/form.png", "Apply All Category From", const FormScreen()),
-  DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
-      const VidoesScreen()),
-  DrawerModel("assets/images/dateeng.png", "English To Nepali date Converter",
-      const dateconverterScreen()),
-  // DrawerModel("assets/images/language.png", "Language Translator", const ()),
-  // DrawerModel("assets/images/mainloginternet.png", "Internet Speed Test",
-  // const InternetScreen()),
-  DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
-  DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),
-];
-
 class Component {
   String title;
   String image;
@@ -88,10 +67,8 @@ class Component {
 }
 
 List<Component> component = [
-  Component("Result", "assets/images/homeresult.png", const Result()),
-  Component("Form", "assets/images/form.png", const FormScreen()),
-  Component(
-      "Entertainment", "assets/images/entertainment.png", const VidoesScreen()),
-  Component(
-      "Internet", "assets/images/internetword.png", const InternetScreen()),
+  Component("Texting", "assets/images/homeresult.png", const Result()),
+  Component("homw", "assets/images/form.png", const Result()),
+  Component("text", "assets/images/entertainment.png", const Result()),
+  Component("go", "assets/images/internetword.png", const Result()),
 ];
