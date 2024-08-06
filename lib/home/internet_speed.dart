@@ -30,7 +30,7 @@ List<ResultsModel> resultsModel = [
 ];
 
 class InternetScreen extends StatelessWidget {
-  const InternetScreen({Key? key}) : super(key: key);
+  const InternetScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

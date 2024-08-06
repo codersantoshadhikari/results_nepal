@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import '../screens/browser_screen.dart';
 
@@ -56,7 +55,7 @@ class ResultsModel {
 }
 
 class VidoesScreen extends StatelessWidget {
-  const VidoesScreen({Key? key}) : super(key: key);
+  const VidoesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

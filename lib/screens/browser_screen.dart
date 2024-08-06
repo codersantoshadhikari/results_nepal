@@ -3,8 +3,7 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class BrowserScreen extends StatefulWidget {
-  const BrowserScreen({Key? key, required this.url, required this.title})
-      : super(key: key);
+  const BrowserScreen({super.key, required this.url, required this.title});
 
   final String url;
   final String title;

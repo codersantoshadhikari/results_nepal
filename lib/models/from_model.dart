@@ -68,7 +68,7 @@ List<ResultsModel> resultsModel = [
 ];
 
 class FormScreen extends StatelessWidget {
-  const FormScreen({Key? key}) : super(key: key);
+  const FormScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

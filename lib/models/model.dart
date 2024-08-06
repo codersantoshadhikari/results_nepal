@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:resultnepal/home/entertainment_model.dart';
 import 'package:resultnepal/models/from_model.dart';
 import 'package:resultnepal/models/results_model.dart';
-import 'models/datecon_screen.dart';
-import 'models/entertainment_model.dart';
-import 'models/internet_speed.dart';
-import 'models/contact_screen.dart';
-import 'models/news.dart';
+import '../home/internet_speed.dart';
 
 class ReadBox extends StatelessWidget {
   final String title;
@@ -14,12 +11,12 @@ class ReadBox extends StatelessWidget {
   final String imageAsset;
 
   const ReadBox({
-    Key? key,
+    super.key,
     required this.title,
     required this.url,
     required this.color,
     required this.imageAsset,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -68,13 +65,6 @@ List<DrawerModel> drawerList = [
       "assets/images/form.png", "Apply All Category From", const FormScreen()),
   DrawerModel("assets/images/entertainment.png", "Entertainment Videos",
       const VidoesScreen()),
-  DrawerModel("assets/images/dateeng.png", "English To Nepali date Converter",
-      const dateconverterScreen()),
-  // DrawerModel("assets/images/language.png", "Language Translator", const ()),
-  // DrawerModel("assets/images/mainloginternet.png", "Internet Speed Test",
-  // const InternetScreen()),
-  DrawerModel("assets/images/news.jpg", "Nepali News ", const NewsScreen()),
-  DrawerModel("assets/images/caan.png", "Contact Us", const ContactScreen()),
 ];
 
 class Component {
