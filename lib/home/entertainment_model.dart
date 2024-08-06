@@ -61,10 +61,9 @@ class VidoesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<ResultsModel> result = ResultsModel.resultsModel;
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 41, 14, 141),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text("Entertainment Videos"),
-        // backgroundColor: Colors.grey[850],
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),

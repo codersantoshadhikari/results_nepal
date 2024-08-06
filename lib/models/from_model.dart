@@ -75,6 +75,7 @@ class FormScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text("Apply All Category Form"),
       ),
       body: GridView.builder(

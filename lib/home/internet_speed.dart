@@ -38,6 +38,7 @@ class InternetScreen extends StatelessWidget {
       child: Scaffold(
         // backgroundColor: const Color.fromARGB(255, 4, 4, 85),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           title: const Text(
             "Check Your Internet Speed",
             style: TextStyle(

@@ -136,12 +136,13 @@ class Result extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.blue,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text(
           "Check Your Result",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: Color.fromARGB(255, 126, 22, 22),
           ),
         ),
       ),
