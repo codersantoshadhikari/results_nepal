@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:resultnepal/screens/browser_screen.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class ResultsModel {
   final String title;
@@ -36,7 +34,7 @@ class ResultsModel {
     ),
     ResultsModel(
       title: "TU Result",
-      url: "https://tuexam.edu.np/",
+      url: "https://tuexam.edu.np/otuexam/tuexam/",
       imageAsset: 'assets/images/tu.PNG',
       color: const Color.fromARGB(255, 16, 156, 21),
     ),
@@ -125,79 +123,4 @@ class ResultsModel {
       color: const Color.fromARGB(255, 147, 6, 6),
     ),
   ];
-}
-
-class Result extends StatelessWidget {
-  const Result({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    List<ResultsModel> result = ResultsModel.resultsModel;
-    return Scaffold(
-      // backgroundColor: Colors.blue,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: const Text(
-          "Check Your Result",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 126, 22, 22),
-          ),
-        ),
-      ),
-      body: GridView.builder(
-        itemCount: ResultsModel.resultsModel.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
-        ),
-        itemBuilder: (context, index) {
-          var data = ResultsModel.resultsModel[index];
-          return GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => BrowserScreen(
-                            url: data.url,
-                            title: data.title,
-                          )));
-              //launchUrl(Uri.parse(data.url));
-            },
-            child: Card(
-              elevation: 6,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18)),
-              color: const Color.fromARGB(255, 234, 235, 238),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        result[index].imageAsset,
-                        height: 60,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      result[index].title,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 15),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
-      ).p(10),
-    );
-  }
 }
